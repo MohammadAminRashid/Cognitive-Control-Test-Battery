@@ -1,0 +1,533 @@
+How to read the data file?
+### Miyake revisited: Validating the factor structure of an open-source cognitive control test battery ###
+
+Attached are the raw data for each task and the aggregated data file used for the Confirmatory Factor Analysis of a cognitive control test battery studying inhibition, updating and shifting in young adults.
+Below the meaning of the different variables is explained for each csv file. Please contact us if anything is unclear of if you have any questions (eva.vandenbussche@kuleuven.be).
+
+### Antisaccade_RawData ###
+Raw data
+The .csv file contains 26 columns: 
+
+Column 1 (ParticipantNr): number of the participant (ranging from 1 to 197)
+Column 2 (<U+FFFD>): location of the cue on the screen (either left: Cue_L, or right: Cue_R)
+Column 3 (target_A): the target (LeftArrow_L = an arrow pointing to the left on the left side of the screen, LeftArrow_R = an arrow pointing to the left on the right side of the screen, RightArrow_L = an arrow pointing to the right on the left side of the screen, RightArrow_R = an arrow pointing to the right on the right side of the screen, UpArrow_L = an arrow pointing up on the left side of the screen, UpArrow_R = an arrow pointing up on the right side of the screen)
+Column 4 (mask): location of the mask on the screen (either left: Mask_L, or right: Mask_R)
+Column 5 (corrResp): the correct response on the trial (either a left, right, or up arrow key)
+Column 6 (@.thisRepN): current number of repetition of the condition list (e.g. 5 = the fifth repetition of the condition list)
+Column 7 (@.thisTrialN): current trial number within that repeat
+Column 8 (@.thisN): total trials completed so far
+Column 9 (@.thisIndex): the index of the current trial in the original conditions list (e.g. 1 = the first trial in the original conditions list)
+Column 10 (Procedure): indicates if this is a practice or main trial, all practice trials are already removed from this file
+Column 11 (Block): number of block (always 0 here, only 1 block) 
+Column 12 (Cue): location of the cue on the screen, identical to column 2
+Column 13 (Target): the target, identical to column 3
+Column 14 (Resp): participants' response on the trial (either a left, right or up arrow key)
+Column 15 (RT): participants' reaction time on the trial, in seconds
+Column 16 (ACC): participants' accuracy on the trial (either correct: 1 or incorrect: 0)
+Column 17 (ITI): Inter-Trial Interval, time between the cue and the target in seconds, ranging from 1500 to 3500 ms in 250 ms intervals
+Column 18 (Time): elapsed time since the start of the task, in seconds 
+Column 19 (Run): how many times this task has been started (0 as default = first run, can be adapted when the task needs to be restarted e.g. due to a technical error, without having to overwrite the previous run)
+Column 20 (Gender): participants' gender (female, male or other)
+Column 21 (Age): participants' age
+Column 22 (Handedness): participants' handedness (left, right)
+Column 23 (ScreenWidth): screenwidth of the computer on which the task was administerd, in centimeters
+Column 24 (ScreenHz): refresh rate of the computer on which the task was administered, in Hertz
+Column 25 (RT_1000): participants' reaction time on the trial, in miliseconds. This is the RT (column 15) multiplied by 1000. 
+Column 26 (ERR): participants' error rate on the trial (0: correct trial, 1: incorrect trial). This is equal to 1-ACC (column 16).
+
+
+### GoNoGo_RawData ###
+Raw data
+The .csv file contains 22 columns: 
+
+Column 1 (ParticipantNr): number of the participant (ranging from 1 to 197)
+Column 2 (trial): type of trial (1 = Go trial, 0 = NoGo trial)
+Column 3 (target): Go or NoGo target
+Column 4 (color): color of the presented square (blue or yellow)
+Column 5 (@.thisTrialN): current trial number within that repeat
+Column 6 (@.thisN): total trials completed so far
+Column 7 (@.thisIndex): the index of the current trial in the original conditions list (e.g. 1 = the first trial in the original conditions list)
+Column 8 (Procedure): indicates if this is a practice or main trial, all practice trials are already removed from this file
+Column 9 (Counterbalance): the counterbalance rule, in which color the Go stimulus is presented for that participant (either blue or yellow)
+Column 10 (Block): number of block (4 blocks: 0 = first block, 1 = second block, 2 = third block, 3 = fourth block) 
+Column 11 (Resp): participants' response on the trial (either a J key press or no answer, NA, given)
+Column 12 (RT): participants' reaction time on the trial, in seconds
+Column 13 (ACC): participants' accuracy on the trial (either correct: 1 or incorrect: 0)
+Column 14 (Time): elapsed time since the start of the task, in seconds 
+Column 15 (Run): how many times this task has been started (0 as default = first run, can be adapted when the task needs to be restarted e.g. due to a technical error, without having to overwrite the previous run)
+Column 16 (Gender): participants' gender (female, male or other)
+Column 17 (Age): participants' age
+Column 18 (Handedness): participants' handedness (left, right)
+Column 19 (ScreenWidth): screenwidth of the computer on which the task was administerd, in centimeters
+Column 20 (ScreenHz): refresh rate of the computer on which the task was administered, in Hertz
+Column 21 (RT_1000): participants' reaction time on the trial, in miliseconds. This is the RT (column 13) multiplied by 1000. 
+Column 22 (ERR): participants' error rate on the trial (0: correct trial, 1: incorrect trial). This is equal to 1-ACC (column 14).
+
+
+### Stroop_RawData ###
+Raw data
+The .csv file contains 22 columns: 
+
+Column 1 (ParticipantNr): number of the participant (ranging from 1 to 197)
+Column 2 (Color): ink color of the word (red, blue, green or yellow)
+Column 3 (Word): word presented on the screen
+Column 4 (Congruency): congruent (C) or incongruent (I) trial
+Column 5 (CorrResp): the correct response on the trial (0 = D key, 1 = F key, 2 = J key, 3 = K key)
+Column 6 (@.thisTrialN): current trial number within that repeat
+Column 7 (@.thisN): total trials completed so far
+Column 9 (@.thisIndex): the index of the current trial in the original conditions list (e.g. 1 = the first trial in the original conditions list)
+Column 9 (Procedure): indicates if this is a practice or main trial, all practice trials are already removed from this file
+Column 10 (Resp): participants' response on the trial (d, f, j or k key press)
+Column 11 (corResp): the correct response on the trial (d, f, j or k key press)
+Column 12 (RT): participants' reaction time on the trial, in seconds
+Column 13 (ACC): participants' accuracy on the trial (either correct: 1 or incorrect: 0)
+Column 14 (Time): elapsed time since the start of the task, in seconds 
+Column 15 (Run): how many times this task has been started (0 as default = first run, can be adapted when the task needs to be restarted e.g. due to a technical error, without having to overwrite the previous run)
+Column 16 (Gender): participants' gender (female, male or other)
+Column 17 (Age): participants' age
+Column 18 (Handedness): participants' handedness (left, right)
+Column 19 (ScreenWidth): screenwidth of the computer on which the task was administerd, in centimeters
+Column 20 (ScreenHz): refresh rate of the computer on which the task was administered, in Hertz
+Column 21 (RT_1000): participants' reaction time on the trial, in miliseconds. This is the RT (column 14) multiplied by 1000. 
+Column 22 (ERR): participants' error rate on the trial (0: correct trial, 1: incorrect trial). This is equal to 1-ACC (column 15).
+
+
+### LocalGlobal_RawData ###
+Raw data
+The .csv file contains 26 columns: 
+
+Column 1 (ParticipantNr): number of the participant (ranging from 1 to 197)
+Column 2 (<U+FFFD>): the index of the current trial in the original conditions list (e.g. 1 = the first trial in the original conditions list)
+Column 3 (image): the name of the image (from the Stimuli folder) that is presented on this trial
+Column 4 (img_global): the global feature of the image (circle, triangle, square or cross)
+Column 5 (img_local): the local feature of the image (circle, triangle, square or cross)
+Column 6 (resp_global): the correct response for the global feature (circle = d, square = f, triangle = j or cross = k)
+Column 7 (resp_local): the correct response for the local feature (circle = d, square = f, triangle = j or cross = k)
+Column 8 (switch_A): type of trial (1 = switch trial, 0 = no switch trial)
+Column 9 (@.thisTrialN): current trial number within that repeat
+Column 10 (@.thisN): total trials completed so far
+Column 11 (@.thisIndex): the index of the current trial in the original conditions list (e.g. 1 = the first trial in the original conditions list)
+Column 12 (Procedure): indicates if this is a practice or main trial, all practice trials are already removed from this file
+Column 13 (Block): number of block (2 blocks, 0 = first block, 1 = second block) 
+Column 14 (Frame): type of frame (0 = blue and 1 = yellow or 1 = blue and 0 = yellow, depending on randomized frame color mapping in the PsychoPy code)
+Column 15 (Switch): type of trial (1 = switch trial, 0 = no switch trial), identical to column 8
+Column 16 (Target): path to stimulus image in the Stimuli folder
+Column 17 (Resp): participants' response on the trial (d, f, j or k key press)
+Column 18 (corResp): the correct response on the trial (d, f, j or k key press)
+Column 19 (RT): participants' reaction time on the trial, in seconds
+Column 20 (ACC): participants' accuracy on the trial (either correct: 1 or incorrect: 0)
+Column 21 (Time): elapsed time since the start of the task, in seconds 
+Column 22 (FrameColor): color of the frame around the stimulus that serves as cue for either the global or local task (blue or yellow)
+Column 23 (GlobalColor): the frame color that refers to the global task for this participant (blue or yellow)
+Column 24 (LocalColor): the frame color that refers to the local task for this participant (blue or yellow)
+Column 25 (RT_1000): participants' reaction time on the trial, in miliseconds. This is the RT (column 20) multiplied by 1000. 
+Column 26 (ERR): participants' error rate on the trial (0: correct trial, 1: incorrect trial). This is equal to 1-ACC (column 21).
+
+
+### PlusMinus_RawData ###
+Raw data
+The .csv file contains 17 columns: 
+
+Column 1 (ParticipantNr): number of the participant (ranging from 1 to 197)
+Column 2 (StartTime): elapsed time from the beginning of the task until the start of that block, in seconds
+Column 3 (Procedure): indicates if this is a practice or main block, all practice blocks are already removed from this file
+Column 4 (Task): the task of the current block (Plus = add 3 to each number, Minus = subtract 3 from each number, Switch = switch between adding and subtracting 3)
+Column 5 (number_list): the list of numbers presented in this block
+Column 6 (answers): the list of answers given by the participant
+Column 7 (answer_times): the list of elapsed time since the beginning of the task for each answer given by the participant, in seconds
+Column 8 (accuracy): participants' total accuracy on that block (i.e. the sum of participants' accuracy for each number, either correct: 1 or incorrect: 0, 30 numbers per block so total accuracy ranging from 0 to 30)
+Column 9 (EndTime): elapsed time from the beginning of the task until the participant finished that block, in seconds
+Column 10 (Run): how many times this task has been started (0 as default = first run, can be adapted when the task needs to be restarted e.g. due to a technical error, without having to overwrite the previous run)
+Column 11 (Gender): participants' gender (female, male or other)
+Column 12 (Age): participants' age
+Column 13 (Handedness): participants' handedness (left, right)
+Column 14 (ScreenWidth): screenwidth of the computer on which the task was administerd, in centimeters
+Column 15 (ScreenHz): refresh rate of the computer on which the task was administered, in Hertz
+Column 16 (Time_CompleteList): participants' time needed to complete that block, in seconds. This is equal to EndTime (Columns 9) - StartTime (Column 2). 
+Column 17 (error_rateERR): participants' total error rate on that block, this is equal to 30 (i.e. the total amount of numbers participants had to answer) - accuracy (column 8).
+
+
+### NumberLetter_RawData ###
+Raw data
+The .csv file contains 25 columns: 
+
+Column 1 (ParticipantNr): number of the participant (ranging from 1 to 197)
+Column 2 (Task): the task that participants need to do on that trial (Num = number classification task: decide if the number is odd or even, LET = letter classification task: decide if the letter is a consonant or vowel)
+Column 3 (Procedure): indicates if this is a practice or main trial, all practice trials are already removed from this file
+Column 4 (Block): the type of block (NUM = block with only number classification trials, LET = block with only letter classification trials, MIX = block with both number and letter classification tasks)
+Column 5 (Switch): indicates if this trial is a switch trial (1, i.e. when participants need to do a different task than on previous trial) or a no switch trial (0)
+Column 6 (CorrResp): the correct response on the trial (0 = F key press and 1 = J key press for participants with an even participant number, opposite response mapping in odd participant numbers)
+Column 7 (Target): the target stimulus of that trial, i.e. a number-letter pair, e.g. 6 a
+Column 8 (BlockOrder): presented order of blocks for that participant (NUM-LET-MIX or LET-NUM-MIX) 
+Column 9 (Resp): participants' response on the trial (f or j key press)
+Column 10 (corResp): the correct response on the trial (f or j key press)
+Column 11 (RT): participants' reaction time on the trial, in seconds
+Column 12 (ACC): participants' accuracy on the trial (either correct: 1 or incorrect: 0)
+Column 13 (Time): elapsed time since the start of the task, in seconds 
+Column 14 (Color): color of the cue that indicates which task needs to be executed (yellow or blue, this variable has not been used in this final dataset) 
+Column 15 (Run): how many times this task has been started (0 as default = first run, can be adapted when the task needs to be restarted e.g. due to a technical error, without having to overwrite the previous run)
+Column 16 (Gender): participants' gender (female, male or other)
+Column 17 (Age): participants' age
+Column 18 (Handedness): participants' handedness (left, right)
+Column 19 (ScreenWidth): screenwidth of the computer on which the task was administerd, in centimeters
+Column 20 (ScreenHz): refresh rate of the computer on which the task was administered, in Hertz
+Column 21 (RT_1000): participants' reaction time on the trial, in miliseconds. This is the RT (column 15) multiplied by 1000. 
+Column 22 (@.thisTrialN): current trial number within that repeat
+Column 23 (@.thisN): total trials completed so far
+Column 24 (@.thisIndex): the index of the current trial in the original conditions list (e.g. 1 = the first trial in the original conditions list)
+Column 25 (ERR): participants' error rate on the trial (0: correct trial, 1: incorrect trial). This is equal to 1-ACC (column 16).
+
+
+### KeepTrack_RawData ###
+Raw data
+The .csv file contains 30 columns: 
+
+Column 1 (ParticipantNr): number of the participant (ranging from 1 to 197)
+Column 2 (@.thisRepN): current number of repetition of the condition list (e.g. 0 = the first repetition of the condition list)
+Column 3 (@.thisN): total trials completed so far
+Column 4 (cor_resp_1): the correct response on the first target category on the trial (e.g. "giraffe" for the target category "animals")
+Column 5 (cor_resp_2): the correct response on the second target category on the trial (e.g. "silver" for the target category "metals")
+Column 6 (cor_resp_3): the correct response on the third target category on the trial (e.g. "father" for the target category "relatives")
+Column 7 (category_1): the first target category on the trial (e.g. relatives)
+Column 8 (Resp_1): participants' response on the first target category on the trial
+Column 9 (ACC_1): participants' accuracy of the recalled last word of the first target category on the trial (either correct: 1 or incorrect: 0)
+Column 10 (category_2): the second target category on the trial (e.g. countries)
+Column 11 (Resp_2): participants' response on the second target category on the trial
+Column 12 (ACC_2): participants' accuracy of the recalled last word of the second target category on the trial (either correct: 1 or incorrect: 0)
+Column 13 (category_3): the third target category on the trial (e.g. animals)
+Column 14 (Resp_3): participants' response on the third target category on the trial
+Column 15 (ACC_3): participants' accuracy of the recalled last word of the third target category on the trial (either correct: 1 or incorrect: 0)
+Column 16 (procedure): indicates if this is a practice, a main trial with four target categories in the trial or a main trial with five target categories in the trial (four target categories: main1, five target categories: main2), all practice trials are already removed from this file. 
+Column 17 (Block): number of block (1 block, 1 = first block)
+Column 18 (Time):  elapsed time since the start of the task, in seconds 
+Column 19 (Age): participants' age
+Column 20 (Gender): participants' gender (female, male or other)
+Column 21 (Handedness): participants' handedness (left, right)
+Column 22 (Run): ow many times this task has been started (0 as default = first run, can be adapted when the task needs to be restarted e.g. due to a technical error, without having to overwrite the previous run)
+Column 23 (cor_resp_4): the correct response on the fourth target category on the trial (e.g. "red" for the target category "colors")
+Column 24 (category_4): the fourth target category on the trial (e.g. colors)
+Column 25 (Resp_4): participants' response on the fourth target category on the trial
+Column 26 (ACC_4): participants' accuracy of the recalled last word of the fourth target category on the trial (either correct: 1 or incorrect: 0)
+Column 27 (cor_resp_5): the correct response on the fifth target category on the trial, NA: no correct response for trials with only four target categories (e.g. "scarf" for the target category "clothes")
+Column 28 (category_5): the fifth target category on the trial (e.g. metals), NA: no target category for trials with only four target categories
+Column 29 (Resp_5): participants' response on the fifth target category on the trial, NA: no response for trials with only four target categories
+Column 30 (ACC_5): participants' accuracy of the recalled last word of the fourth target category on the trial (correct: 1, incorrect: 0, NA: no answer for trials with only four target categories)
+
+
+### LetterMemory_RawData ###
+Raw data
+The .csv file contains 18 columns: 
+
+Column 1 (ParticipantNr): number of the participant (ranging from 1 to 197)
+Column 2 (@.thisTrialN): current trial number within that repeat
+Column 3 (@.thisN): total trials completed so far
+Column 4 (@.thisIndex): the index of the current trial in the original conditions list (e.g. 1 = the first trial in the original conditions list)
+Column 5 (Procedure): indicates if this is a practice or main trial, all practice trials are already removed from this file
+Column 6 (nLetters): the total amount of letters presented in the stream on that trial (4, 5, 7, 9 or 11 letters)
+Column 7 (LetterStream): list of letters presented on that trial
+Column 8 (CorResp): the correct response on the trial, i.e. a set containing the four last numbers of the letterstream
+Column 9 (Resp): participants' response on the trial, i.e. a set of the four letters they recalled on this trail
+Column 10 (ACC): participants' total accuracy on the trial (i.e. the sum of participants' accuracy for each letter, either correct: 1 or incorrect: 0, 4 letters that need to be recalled per trial so total accuracy ranging from 0 to 4)
+Column 11 (Time): elapsed time since the start of the task, in seconds 
+Column 12 (Run): how many times this task has been started (0 as default = first run, can be adapted when the task needs to be restarted e.g. due to a technical error, without having to overwrite the previous run)
+Column 13 (Gender): participants' gender (female, male or other)
+Column 14 (Age): participants' age
+Column 15 (Handedness): participants' handedness (left, right)
+Column 16 (ScreenWidth): screenwidth of the computer on which the task was administerd, in centimeters
+Column 17 (ScreenHz): refresh rate of the computer on which the task was administered, in Hertz
+Column 18 (ERR): participants' total error rate on the trial, this is equal to 4 (i.e. the total amount of letters participants had to recall) - accuracy (column 11).
+
+
+### NBack_RawData ###
+Raw data
+The .csv file contains 22 columns: 
+
+Column 1 (ParticipantNr): number of the participant (ranging from 1 to 197)
+Column 2 (image): the name of the image (from the Stimuli folder) that is presented on this trial
+Column 3 (hit_A): the type of trial (0 = No Hit trial, 1 = Hit trial, i.e. when the image on the current trial is the same as two trials before)
+Column 4 (@.thisTrialN): current trial number within that repeat
+Column 5 (@.thisN): total trials completed so far
+Column 6 (@.thisIndex): the index of the current trial in the original conditions list (e.g. 1 = the first trial in the original conditions list)
+Column 7 (Procedure): indicates if this is a practice or main trial, all practice trials are already removed from this file
+Column 8 (Block): number of block (two blocks, 0 = first block, 1 = second block) 
+Column 9 (Hit): indicates if the image on the current trials is the same as two trials before (1) or not (0)
+Column 10 (Resp): participants' response on the trial (j = J press key, NA = no answer given)
+Column 11 (corResp): the correct response on the trial (j = J press key, NA = no answer needed)
+Column 12 (RT): participants' reaction time on the trial, in seconds
+Column 13 (ACC): participants' accuracy on the trial (either correct: 1 or incorrect: 0)
+Column 14 (Time): elapsed time since the start of the task, in seconds 
+Column 15 (Run): how many times this task has been started (0 as default = first run, can be adapted when the task needs to be restarted e.g. due to a technical error, without having to overwrite the previous run)
+Column 16 (Gender): participants' gender (female, male or other)
+Column 17 (Age): participants' age
+Column 18 (Handedness): participants' handedness (left, right)
+Column 19 (ScreenWidth): screenwidth of the computer on which the task was administerd, in centimeters
+Column 20 (ScreenHz): refresh rate of the computer on which the task was administered, in Hertz
+Column 21 (RT_1000): participants' reaction time on the trial, in miliseconds. This is the RT (column 13) multiplied by 1000. 
+Column 22 (ERR): participants' error rate on the trial (0: correct trial, 1: incorrect trial). This is equal to 1-ACC (column 14).
+
+
+### DemeyerDePue_DataAggr.csv ###
+Aggregated data
+The .csv file contains 261 columns:
+
+Column 1 (ParticipantNr): number of the participant (ranging from 1 to 284)
+Column 2 (Antisac_Mean_RT): participants' mean reaction time on the Antisaccade task, in milliseconds.
+Column 3 (Antisac_Median_RT): participants' median reaction time on the Antisaccade task, in milliseconds.
+Column 4 (Antisac_SD_RT): participans' standard deviation of the reaction time on the Antisaccade task, in milliseconds.
+Column 5 (Antisac_Mean_ACC): participants' mean accuracy on the Antisaccade task (ranging from 0 to 1)
+Column 6 (Antisac_Median_ACC): participants' median accuracy on the Antisaccade task (either 0 or 1)
+Column 7 (Antisac_SD_ACC): participants' standard deviation of the accuracy on the Antisaccade task (ranging from 0 to 1)
+Column 8 (Antisac_Mean_ERR): participants' mean error rate on the Antisaccade task (ranging from 0 to 1). This is equal to 1-Antisac_Mean_ACC (column 5).
+Column 9 (Antisac_Median_ERR): participants' median error rate on the Antisaccade task (either 0 or 1). This is equal to 1-Antisac_Median_ACC (column 6).
+Column 10 (Antisac_SD_ERR): participants' standard deviation of the error rate on the Antisaccade task (ranging from 0 to 1)
+Column 11 (GlobLoc_Mean_RT_No_Switch): participants' mean reaction time on no switch trials in the Local-Global task, in milliseconds.
+Column 12 (GlobLoc_Mean_RT_Switch): participants' mean reaction time on switch trials in the Local-Global task, in milliseconds.
+Column 13 (GlobLoc_Median_RT_No_Switch): participants' median reaction time on no switch trials in the Local-Global task, in milliseconds.
+Column 14 (GlobLoc_Median_RT_Switch): participants' median reaction time on switch trials in the Local-Global task, in milliseconds.
+Column 15 (GlobLoc_SD_RT_No_Switch): participants' standard deviation of the reaction time on no switch trials in the Local-Global task, in milliseconds.
+Column 16 (GlobLoc_SD_RT_Switch): participants' standard deviation of the reaction time on switch trials in the Local-Global task, in milliseconds.
+Column 17 (GlobLoc_Mean_RT_Switch_Cost): participants' mean reaction time switch cost in the Local-Global task, in milliseconds. This is equal to GlobLoc_Mean_RT_Switch (column 12) - GlobLoc_Mean_RT_No_Switch (column 11).
+Column 18 (GlobLoc_Median_RT_Switch_Cost): participants' median reaction time switch cost in the Local-Global task, in milliseconds. This is equal to GlobLoc_Median_RT_Switch (column 14) - GlobLoc_Median_RT_No_Switch (column 13).
+Column 19 (GlobLoc_SD_RT_Switch_Cost): participants' standard deviation on the reaction time switch cost in the Local-Global task, in milliseconds. This is equal to GlobLoc_SD_RT_Switch (column 16) - GlobLoc_SD_RT_No_Switch (column 15).
+Column 20 (GlobLoc_Mean_ACC_No_Switch): participants' mean accuracy on no switch trials in the Local-Global task (ranging from 0 to 1)
+Column 21 (GlobLoc_Mean_ACC_Switch): participants' mean accuracy on switch trials in the Local-Global task (ranging from 0 to 1)
+Column 22 (GlobLoc_Median_ACC_No_Switch): participants' median accuracy on no switch trials in the Local-Global task (either 0 or 1)
+Column 23 (GlobLoc_Median_ACC_Switch): participants' median accuracy on switch trials in the Local-Global task (either 0 or 1)
+Column 24 (GlobLoc_SD_ACC_No_Switch): participants' standard deviation of the accuracy on no switch trials in the Local-Global task (ranging from 0 to 1)
+Column 25 (GlobLoc_SD_ACC_Switch): participants' standard deviation of the accuracy on switch trials in the Local-Global task (ranging from 0 to 1)
+Column 26 (GlobLoc_Mean_ERR_No_Switch): participants' mean error rate on no switch trials in the Local-Global task (ranging from 0 to 1). This is equal to 1-GlobLoc_Mean_ACC_No_Switch (column 20).
+Column 27 (GlobLoc_Mean_ERR_Switch): participants' mean error rate on switch trials in the Local-Global task (ranging from 0 to 1). This is equal to 1-GlobLoc_Mean_ACC_Switch (column 21).
+Column 28 (GlobLoc_Median_ERR_No_Switch): participants' median error rate on no switch trials in the Local-Global task (either 0 or 1). This is equal to 1-GlobLoc_Median_ACC_No_Switch (column 22).
+Column 29 (GlobLoc_Median_ERR_Switch): participants' median error rate on switch trials in the Local-Global task (either 0 or 1). This is equal to 1-GlobLoc_Median_ACC_Switch (column 23).
+Column 30 (GlobLoc_SD_ERR_No_Switch): participants' standard deviation of the error rate on no switch trials in the Local-Global task (ranging from 0 to 1). This is equal to GlobLoc_SD_ACC_No_Switch (column 24).
+Column 31 (GlobLoc_SD_ERR_Switch): participants' standard deviation of the error rate on switch trials in the Local-Global task (ranging from 0 to 1). This is equal to GlobLoc_SD_ACC_Switch (column 25).
+Column 32 (GlobLoc_Mean_ACC_Switch_Cost): participants' mean accuracy switch cost in the Local-Global task (ranging from 0 to 1). This is equal to GlobLoc_Mean_ACC_Switch (column 21) - GlobLoc_Mean_ACC_No_Switch (column 20).
+Column 33 (GlobLoc_Median_ACC_Switch_Cost): participants' median accuracy switch cost in the Local-Global task (either 0 or 1). This is equal to GlobLoc_Median_ACC_Switch (column 23) - GlobLoc_Median_ACC_No_Switch (column 22).
+Column 34 (GlobLoc_SD_ACC_Switch_Cost): participants' standard deviation on the accuracy switch cost in the Local-Global task (ranging from 0 to 1). This is equal to GlobLoc_SD_ACC_Switch (column 25) - GlobLoc_SD_ACC_No_Switch (column 24).
+Column 35 (GlobLoc_Mean_ERR_Switch_Cost): participants' mean error rate switch cost in the Local-Global task (ranging from 0 to 1). This is equal to GlobLoc_Mean_ERR_Switch (column 27) - GlobLoc_Mean_ERR_No_Switch (column 26).
+Column 36 (GlobLoc_Median_ERR_Switch_Cost): participants' median error rate switch cost in the Local-Global task (either 0 or 1). This is equal to GlobLoc_Median_ERR_Switch (column 29) - GlobLoc_Median_ERR_No_Switch (column 28).
+Column 37 (GlobLoc_SD_ERR_Switch_Cost): participants' standard deviation on the error rate switch cost in the Local-Global task (ranging from 0 to 1). This is equal to GlobLoc_SD_ERR_Switch (column 31) - GlobLoc_SD_ERR_No_Switch (column 30).
+Column 38 (KeepTrack_ACC_27): participants' total number of correctly recalled last words in the Keep Track task (ranging from 0 to 27).
+Column 39 (KeepTrack_ERR_27): participants' total number of incorrectly recalled last words in the Keep Track task (ranging from 0 to 27). This is equal to 27-KeepTrack_ACC_27 (column 38).
+Column 40 (KeepTrack_ACC): participants' percentage of correctly recalled last words in the Keep Track task (ranging from 0 to 1). This is equal to KeepTrack_ACC_27 (column 38)/27.
+Column 41 (KeepTrack_ERR): participants' percentage of incorrectly recalled last words in each target category and trial in the Keep Track task (ranging from 0 to 1). This is equal to KeepTrack_ERR_27/27 (column 39).
+Column 42 (PlusMinus_Time_Subtr): participants' time to complete the subtraction block in the Plus-Minus task, in seconds.
+Column 43 (PlusMinus_Time_Add): participants' time to complete the addition block in the Plus-Minus task, in seconds.
+Column 44 (PlusMinus_Time_Switch): participants' time to complete the alternating block in the Plus-Minus task, in seconds.
+Column 45 (PlusMinus_Mean_Time): participants' mean time on the subtraction, addition and alternating blocks in the Plus-Minus task, in seconds. 
+Column 46 (PlusMinus_Median_Time): participants' median time on the subtraction, addition and alternating blocks in the Plus-Minus task, in seconds.
+Column 47 (PlusMinus_SD_Time): participants' standard deviation of the time on the subtraction, addition and alternating blocks in the Plus-Minus task, in seconds.
+Column 48 (PlusMinus_Time_Average_Add_Subtr): participants' mean time on the subtraction and addition blocks in the Plus-Minus task, in seconds.
+Column 49 (PlusMinus_Time_Switch_Cost): participants' time switch cost in the Plus-Minus task. This is equal to PlusMinus_Time_Switch (column 44) - PlusMinus_Time_Average_Add_Subtr (column 48).
+Column 50 (PlusMinus_ACC_Subtr): participants' percentage of correct numbers in the subtraction block in the Plus-Minus task (ranging from 0 to 1).
+Column 51 (PlusMinus_ACC_Add): participants' percentage of correct numbers in the addition block in the Plus-Minus task (ranging from 0 to 1).
+Column 52 (PlusMinus_ACC_Switch): participants' percentage of correct numbers in the alternating block in the Plus-Minus task (ranging from 0 to 1).
+Column 53 (PlusMinus_ERR_Subtr): participants' percentage of incorrect numbers in the subtraction block in the Plus-Minus task (ranging from 0 to 1). This is equal to 1-PlusMinus_ACC_Subtr (column 50).
+Column 54 (PlusMinus_ERR_Add): participants' percentage of incorrect numbers in the addition block in the Plus-Minus task (ranging from 0 to 1). This is equal to 1-PlusMinus_ACC_Add (column 51).
+Column 55 (PlusMinus_ERR_Switch): participants' percentage of incorrect numbers in the alternating block in the Plus-Minus task (ranging from 0 to 1). This is equal to 1-PlusMinus_ACC_Switch (column 52).
+Column 56 (PlusMinus_ACC_Average_Add_Subtr): participants' mean percentage of correct numbers on the subtraction and addition blocks in the Plus-Minus task (ranging from 0 to 1).
+Column 57 (PlusMinus_ERR_Average_Add_Subtr): participants' mean percentage of incorrect numbers on the subtraction and addition blocks in the Plus-Minus task (ranging from 0 to 1). This is equal to 1-PlusMinus_ACC_Average_Add_Subtr (column 56).
+Column 58 (PlusMinus_ACC_Switch_Cost): participants' percentage of correct numbers switch cost in the Plus-Minus task. This is equal to PlusMinus_ACC_Switch (column 52) - PlusMinus_ACC_Average_Add_Subtr (column 56).
+Column 59 (PlusMinus_ERR_Switch_Cost): participants' percentage of incorrect numbers switch cost in the Plus-Minus task. This is equal to PlusMinus_ERR_Switch (column 55) - PlusMinus_ERR_Average_Add_Subtr (column 57).
+Column 60 (LetMem_LetterCount_ACC_80): participants' total number of correctly recalled letters in the Letter Memory task (ranging from 0 to 80)
+Column 61 (LetMem_PropCorr): participant's percentage of correctly recalled words in the Letter Memory task (ranging from 0 to 1). This is equal to LetMem_LetterCount_ACC_80 (column 60)/80.
+Column 62 (LetMem_LetterCount_ERR_80): participants' total number of incorrectly recalled letters in the Letter Memory task (ranging from 0 to 80). This is equal to 80-LetMem_LetterCount_ACC_80 (column 60).
+Column 63 (LetMem_ERR): participant's percentage of incorrectly recalled words in the Letter Memory task (ranging from 0 to 1). This is equal to LetMem_LetterCount_ERR_80 (column 62)/80.
+Column 64 (GoNoGo_Mean_RT_Go): participant's mean reaction time on Go trials in the Go No-Go task, in milliseconds.
+Column 65 (GoNoGo_Median_RT_Go): participant's median reaction time on Go trials in the Go No-Go task, in milliseconds.
+Column 66 (GoNoGo_SD_RT_Go): participant's standard deviation of the reaction time on Go trials in the Go No-Go task, in milliseconds.
+Column 67 (GoNoGo_Mean_ERR_Go): participants' mean error rate on Go trials in the Go No-Go task (ranging from 0 to 1).
+Column 68 (GoNoGo_Median_ERR_Go): participants' median error rate on Go trials in the Go No-Go task (either 0 or 1).
+Column 69 (GoNoGo_SD_ERR_Go): participants' standard deviation of the error rate on Go trials in the Go No-Go task (ranging from 0 to 1).
+Column 70 (GoNoGo_Mean_ERR_NoGo): participants' mean error rate on No-Go trials in the Go No-Go task (ranging from 0 to 1).
+Column 71 (GoNoGo_Median_ERR_NoGo): participants' median error rate on No-Go trials in the Go No-Go task (either 0 or 1).
+Column 72 (GoNoGo_SD_ERR_NoGo): participants' standard deviation of the error rate on No-Go trials in the Go No-Go task (ranging from 0 to 1).
+Column 73 (GoNoGo_Mean_ACC_Go): participants' mean accuracy on Go trials in the Go No-Go task (ranging from 0 to 1). This is equal to 1-GoNoGo_Mean_ERR_Go (column 67).
+Column 74 (GoNoGo_Median_ACC_Go): participants' median accuracy on Go trials in the Go No-Go task (either 0 or 1). This is equal to 1-GoNoGo_Median_ERR_Go (column 68).
+Column 75 (GoNoGo_SD_ACC_Go): participants' standard deviation of the accuracy on Go trials in the Go No-Go task (ranging from 0 to 1). This is equal to GoNoGo_SD_ERR_Go (column 69).
+Column 76 (GoNoGo_Mean_ACC_NoGo): participants' mean accuracy on No-Go trials in the Go No-Go task (ranging from 0 to 1). This is equal to 1-GoNoGo_Mean_ERR_NoGo (column 70).
+Column 77 (GoNoGo_Median_ACC_NoGo): participants' median accuracy on No-Go trials in the Go No-Go task (either 0 or 1). This is equal to 1-GoNoGo_Median_ERR_NoGo (column 71).
+Column 78 (GoNoGo_SD_ACC_NoGo): participants' standard deviation of the accuracy on No-Go trials in the Go No-Go task (ranging from 0 to 1). This is equal to GoNoGo_SD_ERR_NoGo (column 72).
+Column 79 (GoNoGo_Mean_ERR_Overall): participant's mean error rate on both Go and No-Go trials in the Go No-Go task (ranging from 0 to 1).
+Column 80 (GoNoGo_Median_ERR_Overall): participant's median error rate on both Go and No-Go trials in the Go No-Go task (either 0 or 1).
+Column 81 (GoNoGo_SD_ERR_Overall): participants' standard deviation of the error rate on both Go and No-Go trials in the Go No-Go task (ranging from 0 to 1).
+Column 82 (GoNoGo_Mean_ACC_Overall): participant's mean accuracy on both Go and No-Go trials in the Go No-Go task (ranging from 0 to 1). This is equal to 1-GoNoGo_Mean_ERR_Overall (column 79).
+Column 83 (GoNoGo_Median_ACC_Overall): participant's median accuracy on both Go and No-Go trials in the Go No-Go task (either 0 or 1). This is equal to 1-GoNoGo_Median_ERR_Overall (column 80).
+Column 84 (GoNoGo_SD_ACC_Overall): participants' standard deviation of the accuracy on both Go and No-Go trials in the Go No-Go task (ranging from 0 to 1). This is equal to GoNoGo_SD_ERR_Overall (column 81).
+Column 85 (NumLet_Mean_RT_Let): participant's mean reaction time on trials in the letter classification block in the Number-Letter task, in milliseconds.
+Column 86 (NumLet_Median_RT_Let): participant's median reaction time on trials in the letter classification block in the Number-Letter task, in milliseconds.
+Column 87 (NumLet_SD_RT_Let): participant's standard deviation of the reaction time on trials in the letter classification block in the Number-Letter task, in milliseconds.
+Column 88 (NumLet_Mean_RT_Num): participant's mean reaction time on trials in the number classification block in the Number-Letter task, in milliseconds.
+Column 89 (NumLet_Median_RT_Num): participant's median reaction time on trials in the number classification block in the Number-Letter task, in milliseconds.
+Column 90 (NumLet_SD_RT_Num): participant's standard deviation of the reaction time on trials in the number classification block in the Number-Letter task, in milliseconds.
+Column 91 (NumLet_Mean_RT_Mix): participant's mean reaction time on trials in the mixed block in the Number-Letter task, in milliseconds.
+Column 92 (NumLet_Median_RT_Mix): participant's median reaction time on trials in the mixed block in the Number-Letter task, in milliseconds.
+Column 93 (NumLet_SD_RT_Mix): participant's standard deviation of the reaction time on trials in the mixed block in the Number-Letter task, in milliseconds.
+Column 94 (NumLet_Mean_RT_Total): participant's mean reaction time on all trials in the Number-Letter task, in milliseconds.
+Column 95 (NumLet_Median_RT_Total): participant's median reaction time on all trials in the Number-Letter task, in milliseconds.
+Column 96 (NumLet_SD_RT_Total): participant's standard deviation of the reaction time on all trials in the Number-Letter task, in milliseconds.
+Column 97 (NumLet_Mean_RT_Switch): participant's mean reaction time on switch trials in the mixed block in the Number-Letter task, in milliseconds.
+Column 98 (NumLet_Median_RT_Switch): participant's median reaction time on switch trials in the mixed block in the Number-Letter task, in milliseconds.
+Column 99 (NumLet_SD_RT_Switch): participant's standard deviation of the reaction time on switch trials in the mixed block in the Number-Letter task, in milliseconds.
+Column 100 (NumLet_Mean_Average_RT_NumLetBlocks): participant's mean reaction time on trials in the letter and number classification blocks in the Number-Letter task, in milliseconds. This is equal to (NumLet_Mean_RT_Let (column 85) + NumLet_Mean_RT_Num (column 88))/2.
+Column 101 (NumLet_Median_Average_RT_NumLetBlocks): participant's median reaction time on trials in the letter and number classification blocks in the Number-Letter task, in milliseconds. This is equal to (NumLet_Median_RT_Let (column 86) + NumLet_Median_RT_Num (column 89))/2.
+Column 102 (NumLet_SD_Average_RT_NumLetBlocks): participant's standard deviation of the reaction time on trials in the letter and number classification blocks in the Number-Letter task, in milliseconds. This is equal to (NumLet_SD_RT_Let (column 87) + NumLet_SD_RT_Num (column 90))/2.
+Column 103 (NumLet_Mean_RT_No_Switch): participant's mean reaction time on all no switch trials in the Number-Letter task, in milliseconds.
+Column 104 (NumLet_Median_RT_No_Switch): participant's median reaction time on all no switch trials in the Number-Letter task, in milliseconds.
+Column 105 (NumLet_SD_RT_No_Switch): participant's standard deviation of the reaction time on all no switch trials in the Number-Letter task, in milliseconds.
+Column 106 (NumLet_Mean_RT_SwitchCost_Global): participants' mean reaction time global switch cost in the Number-Letter task, in milliseconds. This is equal to NumLet_Mean_RT_Mix (column 91) - NumLet_Mean_Average_RT_NumLetBlocks (column 100).
+Column 107 (NumLet_Median_RT_SwitchCost_Global): participants' median reaction time global switch cost in the Number-Letter task, in milliseconds. This is equal to NumLet_Median_RT_Mix (column 92) - NumLet_Median_Average_RT_NumLetBlocks (column 101).
+Column 108 (NumLet_SD_RT_SwitchCost_Global): participants' standard deviation of the reaction time global switch cost in the Number-Letter task, in milliseconds. This is equal to NumLet_SD_RT_Mix (column 93) - NumLet_SD_Average_RT_NumLetBlocks (column 102).
+Column 109 (NumLet_Mean_RT_SwitchCost_Local): participants' mean reaction time local switch cost in the Number-Letter task, in milliseconds. This is equal to NumLet_Mean_RT_Switch (column 97) - NumLet_Mean_Average_RT_NumLetBlocks (column 103).
+Column 110 (NumLet_Median_RT_SwitchCost_Local): participants' median reaction time local switch cost in the Number-Letter task, in milliseconds. This is equal to NumLet_Median_RT_Switch (column 101) - NumLet_Median_Average_RT_NumLetBlocks (column 101).
+Column 111 (NumLet_SD_RT_SwitchCost_Local): participants' standard deviation of the reaction time local switch cost in the Number-Letter task, in milliseconds. This is equal to NumLet_SD_RT_Switch (column 99) - NumLet_SD_RT_NumLetBlocks (column 102).
+Column 112 (NumLet_Mean_ACC_Let): participant's mean accuracy on trials in the letter classification block in the Number-Letter task (ranging from 0 to 1).
+Column 113 (NumLet_Median_ACC_Let): participant's median accuracy on trials in the letter classification block in the Number-Letter task (either 0 or 1).
+Column 114 (NumLet_SD_ACC_Let): participant's standard deviation of the accuracy on trials in the letter classification block in the Number-Letter task (ranging from 0 to 1).
+Column 115 (NumLet_Mean_ACC_Num): participant's mean accuracy on trials in the number classification block in the Number-Letter task (ranging from 0 to 1).
+Column 116 (NumLet_Median_ACC_Num): participant's median accuracy on trials in the number classification block in the Number-Letter task (either 0 or 1).
+Column 117 (NumLet_SD_ACC_Num): participant's standard deviation of the accuracy on trials in the number classification block in the Number-Letter task (ranging from 0 to 1).
+Column 118 (NumLet_Mean_ACC_Mix): participant's mean accuracy on trials in the mixed block in the Number-Letter task (ranging from 0 to 1).
+Column 119 (NumLet_Median_ACC_Mix): participant's median accuracy on trials in the mixed block in the Number-Letter task (either 0 or 1).
+Column 120 (NumLet_SD_ACC_Mix): participant's standard deviation of the accuracy on trials in the mixed block in the Number-Letter task (ranging from 0 to 1).
+Column 121 (NumLet_Mean_ACC_Total): participant's mean accuracy on all trials in the Number-Letter task (ranging from 0 to 1).
+Column 122 (NumLet_Median_ACC_Total): participant's median accuracy on all trials in the Number-Letter task (either 0 or 1).
+Column 123 (NumLet_SD_ACC_Total): participant's standard deviation of the accuracy on all trials in the Number-Letter task (ranging from 0 to 1).
+Column 124 (NumLet_Mean_ERR_Let): participant's mean error rate on trials in the letter classification block in the Number-Letter task (ranging from 0 to 1). This is equal to 1-NumLet_Mean_ACC_Let (column 112).
+Column 125 (NumLet_Median_ERR_Let): participant's median error rate on trials in the letter classification block in the Number-Letter task (either 0 or 1). This is equal to 1-NumLet_Median_ACC_Let (column 113).
+Column 126 (NumLet_SD_ERR_Let): participant's standard deviation of the error rate on trials in the letter classification block in the Number-Letter task (ranging from 0 to 1). This is equal to NumLet_SD_ACC_Let (column 114).
+Column 127 (NumLet_Mean_ERR_Num): participant's mean error rate on trials in the number classification block in the Number-Letter task (ranging from 0 to 1). This is equal to 1-NumLet_Mean_ACC_Num (column 115).
+Column 128 (NumLet_Median_ERR_Num): participant's median error rate on trials in the number classification block in the Number-Letter task (either 0 or 1). This is equal to 1-NumLet_Median_ACC_Num (column 116).
+Column 129 (NumLet_SD_ERR_Num): participant's standard deviation of the error rate on trials in the number classification block in the Number-Letter task (ranging from 0 to 1). This is equal to NumLet_SD_ACC_Num (column 117).
+Column 130 (NumLet_Mean_ERR_Mix): participant's mean error rate on trials in the mixed block in the Number-Letter task (ranging from 0 to 1). This is equal to 1-NumLet_Mean_ACC_Mix (column 118).
+Column 131 (NumLet_Median_ERR_Mix): participant's median error rate on trials in the mixed block in the Number-Letter task (either 0 or 1). This is equal to 1-NumLet_Median_ACC_Mix (column 119).
+Column 132 (NumLet_SD_ERR_Mix): participant's standard deviation of the error rate on trials in the mixed block in the Number-Letter task (ranging from 0 to 1). This is equal to NumLet_SD_ACC_Mix (column 120).
+Column 133 (NumLet_Mean_ERR_Total): participant's mean error rate on all trials in the Number-Letter task (ranging from 0 to 1). This is equal to 1-NumLet_Mean_ACC_Total (column 121).
+Column 134 (NumLet_Median_ERR_Total): participant's median error rate on all trials in the Number-Letter task (either 0 or 1). This is equal to 1-NumLet_Median_ACC_Total (column 122).
+Column 135 (NumLet_SD_ERR_Total): participant's standard deviation of the error rate on all trials in the Number-Letter task (ranging from 0 to 1). This is equal to NumLet_SD_ACC_Total (column 123).
+Column 136 (NumLet_Mean_ACC_Switch): participant's mean accuracy on switch trials in the mixed block in the Number-Letter task (ranging from 0 to 1).
+Column 137 (NumLet_Median_ACC_Switch): participant's median accuracy on switch trials in the mixed block in the Number-Letter task (either 0 or 1).
+Column 138 (NumLet_SD_ACC_Switch): participant's standard deviation of the accuracy on switch trials in the mixed block in the Number-Letter task (ranging from 0 to 1).
+Column 139 (NumLet_Mean_ACC_No_Switch): participant's mean accuracy on all no switch trials in the Number-Letter task (ranging from 0 to 1).
+Column 140 (NumLet_Median_ACC_No_Switch): participant's median accuracy on all no switch trials in the Number-Letter task (either 0 or 1).
+Column 141 (NumLet_SD_ACC_No_Switch): participant's standard deviation of the accuracy on all no switch trials in the Number-Letter task (ranging from 0 to 1).
+Column 142 (NumLet_Mean_ERR_Switch): participant's mean error rate on switch trials in the mixed block in the Number-Letter task (ranging from 0 to 1). This is equal to 1-NumLet_Mean_ACC_Switch (column 136).
+Column 143 (NumLet_Median_ERR_Switch): participant's median error rate on switch trials in the mixed block in the Number-Letter task (either 0 or 1). This is equal to 1-NumLet_Median_ACC_Switch (column 137).
+Column 144 (NumLet_SD_ERR_Switch): participant's standard deviation of the error rate on switch trials in the mixed block in the Number-Letter task (ranging from 0 to 1). This is equal to NumLet_SD_ACC_Switch (column 138).
+Column 145 (NumLet_Mean_ERR_No_Switch): participant's mean error rate on all no switch trials in the Number-Letter task (ranging from 0 to 1). This is equal to 1-NumLet_Mean_ACC_No_Switch (column 139).
+Column 146 (NumLet_Median_ERR_No_Switch): participant's median error rate on all no switch trials in the Number-Letter task (either 0 or 1). This is equal to 1-NumLet_Median_ACC_No_Switch (column 140).
+Column 147 (NumLet_SD_ERR_No_Switch): participant's standard deviation of the error rate on all no switch trials in the Number-Letter task (ranging from 0 to 1). This is equal to NumLet_SD_ACC_No_Switch (column 141).
+Column 148 (NumLet_Mean_Average_ACC_NumLetBlocks): participant's mean accuracy on trials in the letter and number classification blocks in the Number-Letter task (ranging from 0 to 1). This is equal to (NumLet_Mean_ACC_Let (column 112) + NumLet_Mean_ACC_Num (column 115))/2.
+Column 149 (NumLet_Median_Average_ACC_NumLetBlocks): participant's median accuracy on trials in the letter and number classification blocks in the Number-Letter task (either 0 or 1). This is equal to (NumLet_Median_ACC_Let (column 113) + NumLet_Median_ACC_Num (column 116))/2.
+Column 150 (NumLet_SD_Average_ACC_NumLetBlocks): participant's standard deviation of the accuracy on trials in the letter and number classification blocks in the Number-Letter task (ranging from 0 to 1). This is equal to (NumLet_SD_ACC_Let (column 114) + NumLet_SD_ACC_Num (column 117))/2.
+Column 151 (NumLet_Mean_Average_ERR_NumLetBlocks): participant's mean error rate on trials in the letter and number classification blocks in the Number-Letter task (ranging from 0 to 1). This is equal to (NumLet_Mean_ERR_Let (column 124) + NumLet_Mean_ERR_Num (column 127))/2.
+Column 152 (NumLet_Median_Average_ERR_NumLetBlocks): participant's median error rate on trials in the letter and number classification blocks in the Number-Letter task (either 0 or 1). This is equal to (NumLet_Median_ERR_Let (column 125) + NumLet_Median_ERR_Num (column 128))/2.
+Column 153 (NumLet_SD_Average_ERR_NumLetBlocks): participant's standard deviation of the error rate on trials in the letter and number classification blocks in the Number-Letter task (ranging from 0 to 1). This is equal to (NumLet_SD_ERR_Let (column 126) + NumLet_SD_ERR_Num (column 129))/2.
+Column 154 (NumLet_Mean_ACC_SwitchCost_Global): participants' mean accuracy global switch cost in the Number-Letter task (ranging from 0 to 1). This is equal to NumLet_Mean_ACC_Mix (column 118) - NumLet_Mean_Average_ACC_NumLetBlocks (column 148).
+Column 155 (NumLet_Median_ACC_SwitchCost_Global): participants' median accuracy global switch cost in the Number-Letter task (either 0 or 1). This is equal to NumLet_Median_ACC_Mix (column 119) - NumLet_Median_Average_ACC_NumLetBlocks (column 149).
+Column 156 (NumLet_SD_ACC_SwitchCost_Global): participants' standard deviation of the accuracy global switch cost in the Number-Letter task (ranging from 0 to 1). This is equal to NumLet_SD_ACC_Mix (column 120) - NumLet_SD_Average_ACC_NumLetBlocks (column 150).
+Column 157 (NumLet_Mean_ACC_SwitchCost_Local): participants' mean accuracy local switch cost in the Number-Letter task (ranging from 0 to 1). This is equal to NumLet_Mean_ACC_Switch (column 136) - NumLet_Mean_Average_ACC_NumLetBlocks (column 148).
+Column 158 (NumLet_Median_ACC_SwitchCost_Local): participants' median accuracy local switch cost in the Number-Letter task (either 0 or 1). This is equal to NumLet_Median_ACC_Switch (column 137) - NumLet_Median_Average_ACC_NumLetBlocks (column 149).
+Column 159 (NumLet_SD_ACC_SwitchCost_Local): participants' standard deviation of the accuracy local switch cost in the Number-Letter task (ranging from 0 to 1). This is equal to NumLet_SD_ACC_Switch (column 138) - NumLet_SD_Average_ACC_NumLetBlocks (column 150).
+Column 160 (NumLet_Mean_ERR_SwitchCost_Global: participants' mean error rate global switch cost in the Number-Letter task (ranging from 0 to 1). This is equal to NumLet_Mean_ERR_Mix (column 130) - NumLet_Mean_Average_ERR_NumLetBlocks (column 151).
+Column 161 (NumLet_Median_ERR_SwitchCost_Global): participants' median error rate global switch cost in the Number-Letter task (either 0 or 1). This is equal to NumLet_Median_ERR_Mix (column 131) - NumLet_Median_Average_ERR_NumLetBlocks (column 152).
+Column 162 (NumLet_SD_ERR_SwitchCost_Global): participants' standard deviation of the error rate global switch cost in the Number-Letter task (ranging from 0 to 1). This is equal to NumLet_SD_ERR_Mix (column 132) - NumLet_SD_Average_ERR_NumLetBlocks (column 153).
+Column 163 (NumLet_Mean_ERR_SwitchCost_Local): participants' mean error rate local switch cost in the Number-Letter task (ranging from 0 to 1). This is equal to NumLet_Mean_ERR_Switch (column 142) - NumLet_Mean_Average_ERR_NumLetBlocks (column 151).
+Column 164 (NumLet_Median_ERR_SwitchCost_Local): participants' median error rate local switch cost in the Number-Letter task (either 0 or 1). This is equal to NumLet_Median_ERR_Switch (column 143) - NumLet_Median_Average_ERR_NumLetBlocks (column 152).
+Column 165 (NumLet_SD_ERR_SwitchCost_Local): participants' standard deviation of the error rate local switch cost in the Number-Letter task (ranging from 0 to 1). This is equal to NumLet_SD_ERR_Switch (column 144) - NumLet_SD_Average_ERR_NumLetBlocks (column 153).
+Column 166 (nBack_Mean_RT_Hit): participant's mean reaction time on Hit trials in the N-back task, in milliseconds.
+Column 167 (nBack_Median_RT_Hit): participant's median reaction time on Hit trials in the N-back task, in milliseconds.
+Column 168 (nBack_SD_RT_Hit): participant's standard deviation of the reaction time on Hit trials in the N-back task, in milliseconds.
+Column 169 (nBack_Mean_ACC_No_Hit): participants' mean accuracy on No Hit trials in the N-back task (ranging from 0 to 1).
+Column 170 (nBack_Median_ACC_No_Hit): participants' median accuracy on No Hit trials in the N-back task (either 0 or 1).
+Column 171 (nBack_SD_ACC_No_Hit): participants' standard deviation of the accuracy on No Hit trials in the N-back task (ranging from 0 to 1).
+Column 172 (nBack_Mean_ACC_Hit): participants' mean accuracy on Hit trials in the N-back task (ranging from 0 to 1).
+Column 173 (nBack_Median_ACC_Hit): participants' median accuracy on Hit trials in the N-back task (either 0 or 1).
+Column 174 (nBack_SD_ACC_Hit): participants' standard deviation of the accuracy on Hit trials in the N-back task (ranging from 0 to 1).
+Column 175 (nBack_Mean_ERR_No_Hit): participants' mean error rate on No Hit trials in the N-back task (ranging from 0 to 1). This is equal to 1-nBack_Mean_ACC_No_Hit (column 169).
+Column 176 (nBack_Median_ERR_No_Hit): participants' median error rate on No Hit trials in the N-back task (either 0 or 1). This is equal to 1-nBack_Median_ACC_No_Hit (column 170).
+Column 177 (nBack_SD_ERR_No_Hit): participants' standard deviation of the error rate on No Hit trials in the N-back task (ranging from 0 to 1). This is equal to nBack_SD_ACC_No_Hit (column 171).
+Column 178 (nBack_Mean_ERR_Hit): participants' mean error rate on Hit trials in the N-back task (ranging from 0 to 1). This is equal to 1-nBack_Mean_ACC_Hit (column 172).
+Column 179 (nBack_Median_ERR_Hit): participants' median error rate on Hit trials in the N-back task (either 0 or 1). This is equal to 1-nBack_Median_ACC_Hit (column 173).
+Column 180 (nBack_SD_ERR_Hit): participants' standard deviation of the error rate on Hit trials in the N-back task (ranging from 0 to 1). This is equal to nBack_SD_ACC_Hit (column 174).
+Column 181 (nBack_Mean_ACC_Total): participant's mean accuracy on both Hit and No Hit trials in the N-back task (ranging from 0 to 1).
+Column 182 (nBack_Median_ACC_Total): participant's median accuracy on both Hit and No Hit trials in the N-back task (either 0 or 1).
+Column 183 (nBack_SD_ACC_Total): participant's standard deviation of the accuracy on both Hit and No Hit trials in the N-back task (ranging from 0 to 1).
+Column 184 (nBack_Mean_ERR_Total): participant's mean error rate on both Hit and No Hit trials in the N-back task (ranging from 0 to 1). This is equal to 1-nBack_Mean_ACC_Total (column 181).
+Column 185 (nBack_Median_ERR_Total): participant's median error rate on both Hit and No Hit trials in the N-back task (either 0 or 1). This is equal to 1-nBack_Median_ACC_Total (column 182).
+Column 186 (nBack_SD_ERR_Total): participant's standard deviation on the error rate on both Hit and No Hit trials in the N-back task (ranging from 0 to 1). This is equal to nBack_SD_ACC_Total (column 183).
+Column 187 (Stroop_Mean_RT_C): participant's mean reaction time on congruent trials in the Stroop task, in milliseconds.
+Column 188 (Stroop_Median_RT_C): participant's median reaction time on congruent trials in the Stroop task, in milliseconds.
+Column 189 (Stroop_SD_RT_C): participant's standard deviation of the reaction time on congruent trials in the Stroop task, in milliseconds.
+Column 190 (Stroop_Mean_RT_I): participant's mean reaction time on incongruent trials in the Stroop task, in milliseconds.
+Column 191 (Stroop_Median_RT_I): participant's median reaction time on incongruent trials in the Stroop task, in milliseconds.
+Column 192 (Stroop_SD_RT_I): participant's standard deviation of the reaction time on incongruent trials in the Stroop task, in milliseconds.
+Column 193 (Stroop_Mean_RT_Total): participant's mean reaction time on both congruent and incongruent trials in the Stroop task, in milliseconds.
+Column 194 (Stroop_Median_RT_Total): participant's median reaction time on both congruent and incongruent trials in the Stroop task, in milliseconds.
+Column 195 (Stroop_SD_RT_Total): participant's standard deviation of the reaction time on both congruent and incongruent trials in the Stroop task, in milliseconds.
+Column 196 (Stroop_Mean_RT_StroopEffect): participants' mean reaction time Stroop effect in the Stroop task, in milliseconds. This is equal to Stroop_Mean_RT_I (column 190) - Stroop_Mean_RT_C (column 187).
+Column 197 (Stroop_Median_RT_StroopEffect): participants' median reaction time Stroop effect in the Stroop task, in milliseconds. This is equal to Stroop_Median_RT_I (column 191) - Stroop_Median_RT_C (column 188).
+Column 198 (Stroop_SD_RT_StroopEffect): participants' standard deviation of the reaction time Stroop effect in the Stroop task, in milliseconds. This is equal to Stroop_SD_RT_I (column 192) - Stroop_SD_RT_C (column 189).
+Column 199 (Stroop_Mean_ACC_C): participants' mean accuracy on congruent trials in the Go No-Go task (ranging from 0 to 1).
+Column 200 (Stroop_Median_ACC_C): participants' median accuracy on congruent trials in the Go No-Go task (either 0 or 1).
+Column 201 (Stroop_SD_ACC_C): participants' standard deviation of the accuracy on congruent trials in the Go No-Go task (ranging from 0 to 1).
+Column 202 (Stroop_Mean_ACC_I): participants' mean accuracy on incongruent trials in the Go No-Go task (ranging from 0 to 1).
+Column 203 (Stroop_Median_ACC_I): participants' median accuracy on incongruent trials in the Go No-Go task (either 0 or 1).
+Column 204 (Stroop_SD_ACC_I): participants' standard deviation of the accuracy on incongruent trials in the Go No-Go task (ranging from 0 to 1).
+Column 205 (Stroop_Mean_ACC_Total): participant's mean accuracy on both congruent and incongruent trials in the Stroop task (ranging from 0 to 1).
+Column 206 (Stroop_Median_ACC_Total): participant's median accuracy on both congruent and incongruent trials in the Stroop task (either 0 or 1).
+Column 207 (Stroop_SD_ACC_Total): participant's standard deviation of the accuracy on both congruent and incongruent trials in the Stroop task (ranging from 0 to 1).
+Column 208 (Stroop_Mean_ERR_C): participants' mean error rate on congruent trials in the Go No-Go task (ranging from 0 to 1). This is equal to 1-Stroop_Mean_ACC_C (column 199).
+Column 209 (Stroop_Median_ERR_C): participants' median error rate on congruent trials in the Go No-Go task (either 0 or 1). This is equal to 1-Stroop_Median_ACC_C (column 200).
+Column 210 (Stroop_SD_ERR_C): participants' mean standard deviation of the error rate on congruent trials in the Go No-Go task (ranging from 0 to 1). This is equal to Stroop_SD_ACC_C (column 201).
+Column 211 (Stroop_Mean_ERR_I): participants' mean error rate on incongruent trials in the Go No-Go task (ranging from 0 to 1). This is equal to 1-Stroop_Mean_ACC_I (column 202).
+Column 212 (Stroop_Median_ERR_I): participants' median error rate on incongruent trials in the Go No-Go task (either 0 or 1). This is equal to 1-Stroop_Median_ACC_I (column 203).
+Column 213 (Stroop_SD_ERR_I): participants' standard deviation of the error rate on incongruent trials in the Go No-Go task (ranging from 0 to 1). This is equal to Stroop_SD_ACC_I (column 204).
+Column 214 (Stroop_Mean_ERR_Total): participant's mean error rate on both congruent and incongruent trials in the Stroop task (ranging from 0 to 1). This is equal to 1-Stroop_Mean_ACC_Total (column 205).
+Column 215 (Stroop_Median_ERR_Total): participant's median error rate on both congruent and incongruent trials in the Stroop task (either 0 or 1). This is equal to 1-Stroop_Median_ACC_Total (column 206).
+Column 216 (Stroop_SD_ERR_Total): participant's standard deviation of the error rate on both congruent and incongruent trials in the Stroop task (ranging from 0 to 1). This is equal to 1-Stroop_SD_ACC_Total (column 207).
+Column 217 (Stroop_Mean_ACC_StroopEffect): participants' mean accuracy Stroop effect in the Stroop task (ranging from 0 to 1). This is equal to Stroop_Mean_ACC_I (column 202) - Stroop_Mean_ACC_C (column 199).
+Column 218 (Stroop_Median_ACC_StroopEffect): participants' median accuracy Stroop effect in the Stroop task (either 0 or 1). This is equal to Stroop_Median_ACC_I (column 203) - Stroop_Median_ACC_C (column 200).
+Column 219 (Stroop_SD_ACC_StroopEffect): participants' standard deviation of the accuracy Stroop effect in the Stroop task (ranging from 0 to 1). This is equal to Stroop_SD_ACC_I (column 204) - Stroop_SD_ACC_C (column 201).
+Column 220 (Stroop_Mean_ERR_StroopEffect): participants' mean error rate Stroop effect in the Stroop task (ranging from 0 to 1). This is equal to Stroop_Mean_ERR_I (column 211) - Stroop_Mean_ERR_C (column 208).
+Column 221 (Stroop_Median_ERR_StroopEffect): participants' median error rate Stroop effect in the Stroop task (either 0 or 1). This is equal to Stroop_Median_ERR_I (column 212) - Stroop_Median_ERR_C (column 209).
+Column 222 (Stroop_SD_ERR_StroopEffect): participants' standard deviation of the error rate Stroop effect in the Stroop task (ranging from 0 to 1). This is equal to Stroop_SD_ERR_I (column 213) - Stroop_SD_ERR_C (column 210).
+Column 223 (RT_Mean_RT): participants' mean reaction time on the Reaction Time task, in milliseconds.
+Column 224 (RT_Median_RT): participants' median reaction time on the Reaction Time task, in milliseconds.
+Column 225 (RT_SD_RT): participants' standard deviation of the reaction time on the Reaction Time task, in milliseconds.
+Column 226 (InformedConsent): indicates if the participant provided informed consent (either yes: 1 or no: 0)
+Column 227 (Age): participants' age
+Column 228 (BiologicalSex): participants' biological sex (male: 0, female: 1, other: 2)
+Column 229 (ColorBlind): indicates if the participant is colorblind (no: 0, yes: 1)
+Column 230 (SleepNormal): participants' normal number of hours of sleep per night
+Column 231 (SleepToday): participants' number of hours of sleep last night
+Column 232 (CoffeeNormal): participant's normal number of cups of coffee per day
+Column 233 (CoffeeToday): participant's number of cups of coffee in the last 24 hours
+Column 234 (AlcoholNormal): participant's normal number of glasses of alchohol per week
+Column 235 (AlcoholToday): participant's number of glasses of alchohol in the last 24 hours
+Column 236 (Diseases): indicates if the participant has/had a disease with a known influence on cognitive functioning (no: 0, yes: 1)
+Column 237 (Medication): indicates if the participant takes medication with a known influence on cognitive functioning (no: 0, yes: 1)
+Column 238 (Order_ComputerTasks): indicates the order in which the computer tasks were administered (order A: 1, order B: 2, order C: 3, order D: 4, order E: 5, order F: 6)
+Column 239 (NASA_Antissaccade_Performance): participant's score on the Subjective Performance Index for the Antisaccade task in the NASA-task Load Index (ranging from 0: perfect to 100: failure, in increments of 5).
+Column 240 (NASA_Antisaccade_Effort): participant's score on the Subjective Mental Effort Index for the Antisaccade task in the NASA-task Load Index (ranging from 0: very low to 100: very high, in increments of 5).
+Column 241 (NASA_GoNoGo_Performance): participant's score on the Subjective Performance Index for the Go No-Go task in the NASA-task Load Index (ranging from 0: perfect to 100: failure, in increments of 5).
+Column 242 (NASA_GoNoGo_Effort): participant's score on the Subjective Mental Effort Index for the Go No-Go task in the NASA-task Load Index (ranging from 0: very low to 100: very high, in increments of 5).
+Column 243 (NASA_Stroop_Performance): participant's score on the Subjective Performance Index for the Stroop task in the NASA-task Load Index (ranging from 0: perfect to 100: failure, in increments of 5).
+Column 244 (NASA_Stroop_Effort): participant's score on the Subjective Mental Effort Index for the Stroop task in the NASA-task Load Index (ranging from 0: very low to 100: very high, in increments of 5).
+Column 245 (NASA_LocalGlobal_Performance): participant's score on the Subjective Performance Index for the Local-Global task in the NASA-task Load Index (ranging from 0: perfect to 100: failure, in increments of 5).
+Column 246 (NASA_LocalGlobal_Effort): participant's score on the Subjective Mental Effort Index for the Local-Global task in the NASA-task Load Index (ranging from 0: very low to 100: very high, in increments of 5).
+Column 247 (NASA_PlusMinus_Performance): participant's score on the Subjective Performance Index for the Plus-Minus task in the NASA-task Load Index (ranging from 0: perfect to 100: failure, in increments of 5).
+Column 248 (NASA_PlusMinus_Effort): participant's score on the Subjective Mental Effort Index for the Plus-Minus task in the NASA-task Load Index (ranging from 0: very low to 100: very high, in increments of 5).
+Column 249 (NASA_NumberLetter_Performance): participant's score on the Subjective Performance Index for the Number-Letter task in the NASA-task Load Index (ranging from 0: perfect to 100: failure, in increments of 5).
+Column 250 (NASA_NumberLetter_Effort): participant's score on the Subjective Mental Effort Index for the Number-Letter task in the NASA-task Load Index (ranging from 0: very low to 100: very high, in increments of 5).
+Column 251 (NASA_KeepTrack_Performance): participant's score on the Subjective Performance Index for the Keep Track task in the NASA-task Load Index (ranging from 0: perfect to 100: failure, in increments of 5).
+Column 252 (NASA_KeepTrack_Effort): participant's score on the Subjective Mental Effort Index for the Keep Track task in the NASA-task Load Index (ranging from 0: very low to 100: very high, in increments of 5).
+Column 253 (NASA_LetterMemory_Performance): participant's score on the Subjective Performance Index for the Letter Memory task in the NASA-task Load Index (ranging from 0: perfect to 100: failure, in increments of 5).
+Column 254 (NASA_LetterMemory_Effort): participant's score on the Subjective Mental Effort Index for the Letter Memory task in the NASA-task Load Index (ranging from 0: very low to 100: very high, in increments of 5).
+Column 255 (NASA_NBack_Performance): participant's score on the Subjective Performance Index for the N-back task in the NASA-task Load Index (ranging from 0: perfect to 100: failure, in increments of 5).
+Column 256 (NASA_NBack_Effort): participant's score on the Subjective Mental Effort Index for the N-back task in the NASA-task Load Index (ranging from 0: very low to 100: very high, in increments of 5).
+Column 257 (NASA_ReactionTime_Performance): participant's score on the Subjective Performance Index for the Reaction Time task in the NASA-task Load Index (ranging from 0: perfect to 100: failure, in increments of 5).
+Column 258 (NASA_ReactionTime_Effort): participant's score on the Subjective Mental Effort Index for the Reaction Time task in the NASA-task Load Index (ranging from 0: very low to 100: very high, in increments of 5).
+Column 259 (Raven_RawScore): participants' raw score on the Raven Standard Progressive Matrices test (ranging from 2 to 60).
+Column 260 (Raven_PercentileScore): participants' percentile score on the Raven Standard Progressive Matrices test (ranging from 0 to 95)
+Column 261 (Included_FinalSample): indicates if the participant was included in the analyses (no: 0, yes:1)
